@@ -31,7 +31,7 @@ wheels/
 */.ipynb_checkpoints/*
 
 # Data files (consider using Git LFS for large files)
-*.csv
+#*.csv
 *.json
 *.xlsx
 *.pkl
