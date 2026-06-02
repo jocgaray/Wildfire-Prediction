@@ -41,9 +41,9 @@ data/processed/
 *.parquet
 
 # Model files
-models/
-*.model
-*.joblib
+#models/
+#*.model
+#*.joblib
 
 # IDE and Editor files
 .vscode/
@@ -73,4 +73,4 @@ logs/
 tmp/
 temp/
 
-models/
+#models/
