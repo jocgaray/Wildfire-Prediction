@@ -3,17 +3,26 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import os
 
 from developer.training_history import show_training_history
 from developer.training_history import get_training_dataframe
 
-FILE1_PATH  = "/home/jose/DSR-UI-Dashbords/Wildfire-Prediction/models/mobilenet_v3_small_training_history.csv"
-FILE2_PATH = "/home/jose/DSR-UI-Dashbords/Wildfire-Prediction/models/resnet18_training_history.csv"
+
+# This automatically finds the directory where your app.py is running
+current_dir = os.path.dirname(os.path.abspath(__file__))
+FILE1_PATH = os.path.join(current_dir, '../models', 'mobilenet_v3_small_training_history.csv')
+FILE2_PATH = os.path.join(current_dir, '../models', 'resnet18_training_history.csv')
+
+
+
+#FILE1_PATH  = "/home/jose/DSR-UI-Dashbords/Wildfire-Prediction/models/mobilenet_v3_small_training_history.csv"
+#FILE2_PATH = "/home/jose/DSR-UI-Dashbords/Wildfire-Prediction/models/resnet18_training_history.csv"
 
 PATHS = [FILE1_PATH,FILE2_PATH]
 
-MODELS_DIR = "./models/"
-TRAINING_CSV_SUFFIX = "training_history.csv"
+#MODELS_DIR = "./models/"
+#TRAINING_CSV_SUFFIX = "training_history.csv"
 EVALUATION_PATH = "./models/evaluation_predictions.csv"
 
 def get_training_dataframe(path_str):
